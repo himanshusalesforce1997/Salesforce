@@ -1,0 +1,19 @@
+{
+    "objects": [
+        {
+            "query": "SELECT Name, Industry FROM Account",
+            "operation": "Upsert",
+            "externalId": "Name"
+        },
+        {
+            "query": "SELECT FirstName, LastName, Email, Account.Name FROM Contact",
+            "operation": "Upsert",
+            "externalId": "Email"
+        },
+        {
+            "query": "SELECT Name, StageName, CloseDate, Account.Name FROM Opportunity",
+            "operation": "Upsert",
+            "externalId": "Name"
+        }
+    ]
+}
